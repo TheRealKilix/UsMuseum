@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#c4506a" />
+    <meta
+      name="description"
+      content="Un musée virtuel rempli de souvenirs et de petits mots."
+    />
+    <title>Notre Musée 3D</title>
+    <script type="module" crossorigin src="./assets/index-z9ozplbD.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/three-BkNhqJzC.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-C7N6rLyl.css">
+  </head>
+  <body>
+    <div id="hud">
+      <div id="av" aria-hidden="true">👧</div>
+      <div>
+        <div id="hn"></div>
+        <div class="bar"><i id="bf"></i></div>
+        <div id="hs"></div>
+      </div>
+    </div>
+    <canvas
+      id="mm"
+      width="80"
+      height="184"
+      aria-label="Carte du musée"
+    ></canvas>
+    <div id="quest"></div>
+    <div id="toast" aria-live="polite"></div>
+    <div id="joy" aria-label="Joystick pour se déplacer">
+      <div id="knob"></div>
+    </div>
+    <button class="control" id="J" aria-label="Sauter">⬆</button>
+    <button class="control" id="O" aria-label="Changer la tenue">👗</button>
+    <button class="main" id="read">💌 Lire</button>
+    <button class="control" id="G" aria-label="Jouer au mini-jeu">🎮</button>
+    <button
+      class="control"
+      id="S"
+      aria-label="Activer ou couper la musique et les sons"
+    >
+      🔊
+    </button>
+
+    <div id="game"></div>
+
+    <section id="intro" aria-labelledby="ititle">
+      <div class="title-screen">
+        <div class="title-screen-top">
+          <span class="edition-label">ÉDITION ANNIVERSAIRE</span>
+          <button
+            class="menu-sound"
+            id="menu-sound"
+            type="button"
+            aria-label="Activer ou couper la musique et les sons"
+            aria-pressed="true"
+          >
+            🔊 <span>Son activé</span>
+          </button>
+        </div>
+        <div class="menu-emblem" aria-hidden="true">💝</div>
+        <p class="menu-eyebrow">UNE AVENTURE IMAGINÉE POUR</p>
+        <h1 id="ititle"></h1>
+        <p id="itext"></p>
+        <div class="menu-details">
+          <span>🖼️ <b>14</b> souvenirs</span>
+          <span>💗 <b>14</b> cœurs à trouver</span>
+        </div>
+        <div class="menu-controls" aria-label="Commandes du jeu">
+          <span><kbd>JOYSTICK</kbd> Se déplacer</span>
+          <span><kbd>GLISSER</kbd> Regarder autour</span>
+          <span><kbd>⬆</kbd> Sauter</span>
+        </div>
+        <button class="main start-button" id="go" type="button">
+          Entrer dans le musée <span aria-hidden="true">→</span>
+        </button>
+        <p class="menu-footer">Prends ton temps. Ce musée est à toi ✨</p>
+      </div>
+    </section>
+    <section
+      id="panel"
+      aria-labelledby="ptitle"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="box">
+        <img id="pimg" alt="Souvenir exposé dans le musée" />
+        <h2 id="ptitle"></h2>
+        <p id="pmsg"></p>
+        <button class="main" id="close">Fermer</button>
+      </div>
+    </section>
+
+  </body>
+</html>
